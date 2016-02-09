@@ -1,0 +1,96 @@
+public class pruebaArreglos{
+	public int suma(int[] numeros){
+		int total=0;
+		for(int i=0;i<numeros.length;i++){
+			total+=numeros[i];
+		}
+		return total;
+	}
+	public int maximo(int[] arreglo){	
+		int max=arreglo[0];
+		for(int i=0; i<arreglo.length;i++){
+			if(arreglo[i]>max){
+				max=arreglo[i];
+				}
+			}							
+				
+		return 	max;	
+	}
+	public int minimo(int[] arreglo){
+		int min= arreglo[0];
+		for(int i=0; i<arreglo.length;i++){
+			if(arreglo[i]<min){
+				min=arreglo[i];
+				}
+			}
+		return min;
+	}	
+
+
+	public double promedio(int[] arreglo){
+		int x=this.suma(arreglo);
+		double prom=x/arreglo.length;
+		return prom;
+		}
+
+	public void imprime(String[][] letras){
+
+
+        for (int i = 0; i < letras.length; i++) {
+
+            for (int j = 0; j < letras[i].length; j++) {
+
+                System.out.print(letras[i][j] + " ");
+            }
+
+     		System.out.println(" ");
+        }
+    }
+		
+
+	public static void main(String[] args){
+		int[] a={10,20,52,530,999,66,69,8};
+		int[] b={18,9};
+		String[][] animals={{"cat", "dog", " lizzard"}, 
+				    {" bear" , " shark " , " snake "}};
+		pruebaArreglos pa= new pruebaArreglos();
+		System.out.println("El total es " + pa.suma(a));
+		System.out.println("El total es " + pa.suma(b));
+		
+		System.out.println("el maximo numero es: " + pa.maximo(a));
+		System.out.println("el maximo numero es: " + pa.maximo(b));
+		
+		System.out.println("el minimo numero es: " + pa.minimo(a));
+		System.out.println("el minimo numero es: " + pa.minimo(b));
+		
+		System.out.println("el promedio es : " + pa.promedio(a));
+		
+		System.out.println("el promedio es : " + pa.promedio(b));
+		pa.imprime(animals);
+		
+
+				 int x = Integer.parseInt(args[0]);
+        int y = Integer.parseInt(args[1]);
+
+        String[][] byd;
+        byd = new String[x][y];
+
+        int counter = 2;
+
+        for (int i = 0; i < byd.length; i++){
+           for (int j = 0; j < byd[i].length; j++){
+             byd[i][j] = args[counter];
+             counter += 1;
+           }
+        }
+
+        for (int i = 0; i < byd.length; i++){
+           for (int j = 0; j < byd[i].length; j++){
+             System.out.print(byd[i][j]+" ");
+           }
+           System.out.println("");
+        }
+	}
+	
+
+}
