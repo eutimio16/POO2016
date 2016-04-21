@@ -1,0 +1,27 @@
+//package imagen;
+
+import java.util.Random;
+
+public class Celda {
+	int valor=0;
+	static Random rm=new Random();
+	
+	public Celda(){
+		valor= (rm.nextInt(2)+1)*2;
+
+	}
+	public Celda(int valor){
+		this.valor=valor;
+		
+	}
+	public String toString(){
+		return this.valor+ " ";
+	}
+	public static void main(String[] args) {
+		Celda celdita=new Celda();
+		System.out.println(celdita);
+	
+
+	}
+
+}
