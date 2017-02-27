@@ -8,7 +8,7 @@ public class EjemploLector {
 	public static void main(String[] args) {
 		try {
 			BufferedReader bf;
-			bf= new BufferedReader(new FileReader("C:\\Asus WebStorage\\eutimioxd@gmail.com\\MySyncFolder\\ITESM en-may 2017\\POO\\2parcial\\nuevo.txt"));
+			bf= new BufferedReader(new FileReader("C:\\nuevo.txt"));
 			
 			String linea=bf.readLine();
 			String linea2=bf.readLine();
