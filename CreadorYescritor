@@ -1,0 +1,25 @@
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class EjemploEscritor {
+
+	public static void main(String[] args) {
+		try {
+			FileWriter fr= new FileWriter("C:\\nuevo.txt");//ruta con doble daigonal invertida 
+			PrintWriter pw = new PrintWriter(fr);
+			pw.println("Este es unnuevo archivo de texto");
+			pw.println("Tienes esta otra linea");
+			pw.println("ia me boi");
+			pw.close();
+			System.out.println("Finalizado!");
+			
+		} catch (IOException e) {
+			system.err.print("Error");
+			e.printStackTrace();
+		}
+
+	}
+
+}
