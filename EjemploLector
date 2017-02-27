@@ -1,0 +1,29 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class EjemploLector {
+
+	public static void main(String[] args) {
+		try {
+			BufferedReader bf;
+			bf= new BufferedReader(new FileReader("C:\\Asus WebStorage\\eutimioxd@gmail.com\\MySyncFolder\\ITESM en-may 2017\\POO\\2parcial\\nuevo.txt"));
+			
+			String linea=bf.readLine();
+			String linea2=bf.readLine();
+			System.out.println(linea);
+			System.out.println(linea2);
+			bf.close();
+			
+			
+		} catch (FileNotFoundException e) {
+			System.err.println("No se encontro el archivvo" + e);
+		}
+		catch(IOException e){
+			System.err.println("Error al leer");
+		}
+
+	}
+
+}
